@@ -6,13 +6,14 @@
         <title>Ivan Alvarez - Portfolio</title>
         <!-- Logo -->
         <link rel="icon" href="assets/img/logo_ia.png" type="image/icon type">
+        <!-- CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+        <!-- CSS -->
         <!-- Custom CSS and Media Queries -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/mediaqueries.css">
-        <!-- CDN and APIs -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Raleway:400,500,700|Sankofa+Display">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
     </head>
     <body>
         <!-- Hero Section -->
@@ -21,14 +22,12 @@
                 <header id="home">
                     <div class="logo">
                         <img src="assets/img/logo_ia.png" alt="Ivan Alvarez Logo">
-                        <!-- <h1>Ivan Alvarez</h1> -->
                     </div>
                     <nav>
                         <div class="togglebtn">
                             <span></span><span></span><span></span>
                         </div>
                         <ul class="navlinks">
-                            <!-- <li><a href="#home">Home</a></li> -->
                             <li><a href="#about">About</a></li>
                             <li><a href="#skills">Skills</a></li>
                             <li><a href="#projects">Projects</a></li>
@@ -41,14 +40,14 @@
                         <img src="assets/img/hero_img.jpg" alt="Profile Pic">
                     </div>
                     <div class="hero-text">
-                        <h1><span class="input"></span></h1>
+                        <div><h1><span class="input"></span></h1></div>
+                        
                         <h2>I'm <span class="falling-text">Ivan Alvarez</span></h2>
-                        <p>An IT Student specializing in Manual Software Testing, Front-End Web Development, and IoT Embedded Systems Development.</p>
-                        <h3>Download my CV and Final Report Document Below</h3>
-                        <br>
+                        <p>An IT student specializing in Manual Software Testing, <br>Front-End Web Development, and IoT Embedded Systems Development.</p>
+                        <h3><Strong>Download my CV and Final Report Document below</Strong></h3>
                         <div class="btn-group">
-                            <a class ="btn" href="assets/files/resume-ivan.pdf" class="btn" download><strong>Download CV</strong></a>
-                            <button class="btn" onclick="openPDFModal()"><strong>FINAL REPORT DOCUMENT</strong></button>
+                            <a class="btn" href="assets/files/IvanKennethAlvarez_CV.pdf" download><strong>Download CV</strong></a>
+                            <button class="btn" onclick="openPDFModal()"><strong>Final Report</strong></button>
                         </div>
                         <div class="social">
                             <a href="https://www.linkedin.com/in/ivankennethalvarez/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -71,10 +70,18 @@
             </div>
         </div>
 
+        <!-- Modal for Enlarged Images -->
+        <div id="image-modal" class="image-modal" tabindex="-1" role="dialog">
+            <div class="image-modal-content">
+                <button class="image-modal-close" onclick="closeImageModal()">Close</button>
+                <img id="enlarged-image" src="" alt="Enlarged Image">
+            </div>
+        </div>
+
         <!-- About Section -->
         <div class="about-sec">
             <section id="about">
-                <p class="section__text__p1">Get To Know More</p>
+                <p class="section__text__p1">Get to Know More</p>
                 <h1 class="title">About Me</h1>
                 <div class="section-container">
                     <div class="section__pic-container">
@@ -86,33 +93,32 @@
                                 <h3 class="experience-sub-title">Background</h3>
                                 <p>🌻 B.Sc. Information Technology, Mapúa Malayan Colleges Laguna</p>
                                 <hr>
-                                <br>
-                                <p>💐 Former Executive President, MMCL Infotech Society</p>
+                                <p>💐 Former Executive President (2023-2024), MMCL Infotech Society</p>
+                                <hr>
+                                <p>🌻 Volunteer (2022-2023), Center for Service-Learning and Community Engagement</p>
                             </div>
                             <div class="details-container">
                                 <h3 class="experience-sub-title">Experience</h3>
-                                <p>✅ <strong>OJT Intern</strong>, Municipality of Binan Laguna - Information & Communications Technology Office </p>
+                                <p>✅ <strong>OJT Intern</strong>, Municipality of Binan Laguna - Information and Communications Technology Office</p>
                                 <hr>
-                                <br>
-                                <p>✅ <strong>SPES Intern</strong>, Santa Rosa City Hall - General Service Office</p>
+                                <p>✅ <strong>SPES Intern</strong>, Municipality of Santa Rosa Laguna - General Service Office</p>
                             </div>
                         </div>
                         <div class="text-container">
                             <p>
-                                I'm <strong>Ivan Kenneth A. Alvarez</strong>, an IT Student skilled in 
+                                I'm <strong>Ivan Kenneth A. Alvarez</strong>, an IT student skilled in 
                                 <strong>Manual Software Testing</strong>, 
                                 <strong>Front-End Development</strong>, and 
                                 <strong>IoT Embedded Systems</strong>. 
-                                Studying Information Technology in <strong>Mapúa Malayan Colleges Laguna</strong> and have certifications such as 
+                                Studying at <strong>Mapúa Malayan Colleges Laguna</strong>, I hold certifications in 
                                 <strong>CompTIA IT Fundamentals</strong>, 
-                                <strong>DICT Business Intelligence with Power BI</strong>, and 
-                                <strong>Programming for Everybody (Getting Started with Python)</strong> from the University of Michigan and
-                                <strong>BPI Foundation Front-End Web Development.</strong>, 
-                                I bring a strong foundation in technology and leadership, honed as Executive President of the 
-                                <strong>MMCL Infotech Society</strong>.
+                                <strong>DICT Business Intelligence with Power BI</strong>, 
+                                <strong>Programming for Everybody (Python)</strong> from the University of Michigan, and
+                                <strong>BPI Foundation Front-End Web Development</strong>. 
+                                My leadership experience as Executive President of the 
+                                <strong>MMCL Infotech Society</strong> complements my technical expertise.
                             </p>
                         </div>
-                        
                         <img src="assets/icons/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="scrollToSection('skills')"/>
                     </div>
                 </div>
@@ -125,7 +131,6 @@
             <h1 class="title">Skills & Experience</h1>
             <div class="skills-details-container">
                 <div class="about-containers">
-                    <!-- Programming Skills -->
                     <div class="details-container">
                         <h2 class="experience-sub-title">Programming Skills</h2>
                         <div class="article-container">
@@ -134,11 +139,13 @@
                             <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>HTML</h3><p>Experienced</p></div></article>
                             <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>CSS</h3><p>Experienced</p></div></article>
                             <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>C# & C++</h3><p>Experienced</p></div></article>
+                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>PHP</h3><p>Experienced</p></div></article>
                             <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>Python</h3><p>Intermediate</p></div></article>
-                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>JavaScript</h3><p>Basic</p></div></article>
+                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>JavaScript</h3><p>Intermediate</p></div></article>
+                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>Raspberry Pi</h3><p>Basic</p></div></article>
+
                         </div>
                     </div>
-                    <!-- Certificates -->
                     <div class="details-container">
                         <h2 class="experience-sub-title">Certificates</h2>
                         <div class="article-container certificates">
@@ -148,11 +155,8 @@
                                     <h3>CompTIA IT Fundamentals (ITF+)</h3>
                                     <p>Certified</p>
                                 </div>
-                                <button class="cert-preview-btn">
+                                <button class="cert-preview-btn" onclick="openImageModal('assets/certificates/comptia_cert.png')">
                                     View Certificate
-                                    <div class="cert-tooltip">
-                                        <img src="assets/certificates/comptia_cert.png" alt="CompTIA Certificate">
-                                    </div>
                                 </button>
                             </article>
                             <article>
@@ -161,11 +165,8 @@
                                     <h3>BPI Foundation Front-End Web Development 101</h3>
                                     <p>Certified</p>
                                 </div>
-                                <button class="cert-preview-btn">
+                                <button class="cert-preview-btn" onclick="openImageModal('assets/certificates/bpi_cert.png')">
                                     View Certificate
-                                    <div class="cert-tooltip">
-                                        <img src="assets/certificates/bpi_cert.png" alt="BPI Certificate">
-                                    </div>
                                 </button>
                             </article>
                             <article>
@@ -174,37 +175,51 @@
                                     <h3>DICT Business Intelligence with Power BI</h3>
                                     <p>Certified</p>
                                 </div>
-                                <button class="cert-preview-btn">
+                                <button class="cert-preview-btn" onclick="openImageModal('assets/certificates/dict_cert.png')">
                                     View Certificate
-                                    <div class="cert-tooltip">
-                                        <img src="assets/certificates/dict_cert.png" alt="DICT Certificate">
-                                    </div>
                                 </button>
                             </article>
                             <article>
                                 <img src="assets/icons/checkmark.png" class="icon">
                                 <div>
-                                    <h3>Programming for Everybody (Getting Started with Python) - 
-                                        University of Michigan</h3>
+                                    <h3>CodeChum Python Course</h3>
                                     <p>Certified</p>
                                 </div>
-                                <button class="cert-preview-btn">
+                                <button class="cert-preview-btn" onclick="openImageModal('assets/certificates/python_cert3.png')">
                                     View Certificate
-                                    <div class="cert-tooltip">
-                                        <img src="assets/certificates/python_cert.png" alt="DICT Certificate">
-                                    </div>
+                                </button>
+                            </article>
+                            <article>
+                                <img src="assets/icons/checkmark.png" class="icon">
+                                <div>
+                                    <h3>Programming for Everybody (Python) - Michigan</h3>
+                                    <p>Certified</p>
+                                </div>
+                                <button class="cert-preview-btn" onclick="openImageModal('assets/certificates/python_cert1.png')">
+                                    View Certificate
+                                </button>
+                            </article>
+                            <article>
+                                <img src="assets/icons/checkmark.png" class="icon">
+                                <div>
+                                    <h3>Analyzing IoT Data in Python</h3>
+                                    <p>Certified</p>
+                                </div>
+                                <button class="cert-preview-btn" onclick="openImageModal('assets/certificates/python_cert2.png')">
+                                    View Certificate
                                 </button>
                             </article>
                         </div>
                     </div>
-                    <!-- Seminars -->
                     <div class="details-container">
                         <h2 class="experience-sub-title">Seminars Attended</h2>
                         <div class="article-container">
                             <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>TechTalk 2025</h3><p>Integrating Security and Efficiency in The Workplace</p></div></article>
-                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>WearOS Workshop Seminar 2025</h3><p>A hands-on workshop focused on developing wearable apps using Android Studio.</p></div></article>
-                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>Introduction to Data Center</h3><p>The integration of data center technologies in education, highlight career opportunities for students. </p></div></article>
-                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>CALABARZON CYBER CARAVAN 2024</h3><p>Cybersecurity Awareness conducted by the Department of Information and Communications Technology Region IV-A Cybersecurity </p></div></article>
+                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>WearOS: Emerging Technology for Internet and Learning of Everything</h3><p>Hands-on workshop for wearable apps using Android Studio</p></div></article>
+                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>Introduction to Data Center</h3><p>Data center technologies in education and career opportunities</p></div></article>
+                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>CALABARZON CYBER CARAVAN 2024</h3><p>Cybersecurity Awareness by DICT Region IV-A</p></div></article>
+                            <article><img src="assets/icons/checkmark.png" class="icon"><div><h3>How to Detect, Defeat, and Prevent Social Engineering Attacks: People, Process, and Technology Security Best Practices</h3><p>Improving cybersecurity proficiency by educating its audience on how we can detect, defeat, and prevent social engineering attack</p></div></article>
+
                         </div>
                     </div>
                 </div>
@@ -216,68 +231,194 @@
         <section id="projects" class="projects-sec">
             <p class="section__text__p1">Browse My Past & Recent</p>
             <h1 class="title">Projects</h1>
-            <div class="experience-details-container">
-                <div class="about-containers">
-                    <!-- Project 1: Snake Game -->
-                    <div class="details-container color-container">
-                        <img src="assets/projects/snake_game.png" alt="Snake Game" class="project-img">
-                        <h2><strong>MACHINE PROBLEM</strong></h2>
-                        <hr>
-                        <br>
-                        <h2 class="experience-sub-title project-title">Snake Game <br>(1st Year)</h2>
-                        <div class="project-details">
-                            <p><strong>Features:</strong> Classic Snake Gameplay, User Score Ranking, Increasing Difficulty.</p>
-                            <p><strong>Software:</strong> Visual Studio Code, C#, Console Application.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('snake')">View Screenshots</button>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h2>1st Year</h2>
+                        <img src="assets/icons/arrow.png" class="icon">
+                    </div>
+                    <div class="accordion-content">
+                        <div class="about-containers">
+                            <div class="details-container color-container">
+                                <img src="assets/projects/grading_system_project/grading_system.png" alt="Grading System" class="project-img" onclick="openImageModal('assets/projects/grading_system_project/grading_system.png')">
+                                <h2><strong>FINAL PROJECT</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">Grading System</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Adding Student, Adding Course, Adding Section, Adding Grade Components, Computation of Grades, View Student Grade per Section, Viewing All Students</p>
+                                    <p><strong>Software:</strong> PyCharm, Python</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('grading_system')">View Screenshots</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Project 2: E-commerce Website -->
-                    <div class="details-container color-container">
-                        <img src="assets/projects/ecommerce.png" alt="E-commerce Website" class="project-img">
-                        <h2><strong>MACHINE PROBLEM</strong></h2>
-                        <hr>
-                        <br>
-                        <h2 class="experience-sub-title project-title">E-commerce Website (2nd Year)</h2>
-                        <div class="project-details">
-                            <p><strong>Features:</strong> User-friendly navigation, User Registration, Product Catalog, Cart, Checkout Process.</p>
-                            <p><strong>Software:</strong> Visual Studio Code, C#, Web Application.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('ecommerce')">View Screenshots</button>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h2>2nd Year</h2>
+                        <img src="assets/icons/arrow.png" class="icon">
+                    </div>
+                    <div class="accordion-content">
+                        <div class="about-containers">
+                            <div class="details-container color-container">
+                                <img src="assets/projects/snake_game_project/snake_game.png" alt="Snake Game" class="project-img" onclick="openImageModal('assets/projects/snake_game_project/snake_game.png')">
+                                <h2><strong>Machine Problem</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">Snake Game</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Classic Snake Gameplay, User Score Ranking, Increasing Difficulty</p>
+                                    <p><strong>Software:</strong> Visual Studio Code, C#, Console Application</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('snake')">View Screenshots</button>
+                                </div>
+                            </div>
+                            <div class="details-container color-container">
+                                <img src="assets/projects/mp3_player_project/mp3_player.png" alt="MP3 Player" class="project-img" onclick="openImageModal('assets/projects/mp3_player_project/mp3_player.png')">
+                                <h2><strong>MACHINE PROBLEM</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">MP3 Player</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Audio playback, Playlist management (add/remove single or multiple tracks), Media library display, Graphical audio visualization, Play/Pause, Stop, Previous/Next track controls</p>
+                                    <p><strong>Software:</strong> PyCharm, Python, Tkinter</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('mp3_player')">View Screenshots</button>
+                                </div>
+                            </div>
+                            <div class="details-container color-container">
+                                <img src="assets/projects/ecommerce_project/ecommerce.png" alt="E-commerce Website" class="project-img" onclick="openImageModal('assets/projects/ecommerce_project/ecommerce.png')">
+                                <h2><strong>MACHINE PROBLEM</strong></h2>
+                                <hr>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">E-commerce Website</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> User-friendly navigation, User Registration, Product Catalog, Cart, Checkout Process.</p>
+                                    <p><strong>Software:</strong> Visual Studio Code, C#, Web Application.</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('ecommerce')">View Screenshots</button>
+                                </div>
+                            </div>
+                            <div class="details-container color-container">
+                                <img src="assets/projects/lehitimo_project/lehitimo.png" alt="Lehitimo" class="project-img" onclick="openImageModal('assets/projects/lehitimo_project/lehitimo.png')">
+                                <h2><strong>MACHINE PROBLEM</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">Lehitimo</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Admin: Create/Update employee information (name, roles, salary), Search/Delete employee; Employee: View personal salary slip, User authentication</p>
+                                    <p><strong>Software:</strong> Visual Studio Code, C#, Mobile Application</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('lehitimo')">View Screenshots</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Project 3: Smart Access Control -->
-                    <div class="details-container color-container">
-                        <img src="assets/projects/smart_access.png" alt="Smart Access Control" class="project-img">
-                        <h2><strong>MACHINE PROBLEM</strong></h2>
-                        <hr>
-                        <br>
-                        <h2 class="experience-sub-title project-title">Smart Access Control and Monitoring System (3rd Year)</h2>
-                        <div class="project-details">
-                            <p><strong>Features:</strong> RFID authentication, Real-time Monitoring, Microcontroller Interfacing.</p>
-                            <p><strong>Software:</strong> Arduino IDE, Visual Studio Code, C# Mobile Application.</p>
-                            <p><strong>Hardware:</strong> WEMOS, Arduino Uno, RFID module.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('smart_access')">View Screenshots</button>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h2>3rd Year</h2>
+                        <img src="assets/icons/arrow.png" class="icon">
+                    </div>
+                    <div class="accordion-content">
+                        <div class="about-containers">
+                            <div class="details-container color-container">
+                                <img src="assets/projects/raspberry_pi_project/raspberry_pi.png" alt="Raspberry Pi" class="project-img" onclick="openImageModal('assets/projects/raspberry_pi_project/raspberry_pi.png')">
+                                <h2><strong>MACHINE PROBLEM</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">Raspberry Pi Project</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Display Christmas-themed patterns (minimum 3) on 8x8 LED matrix, Scrolling message display, Web browser control (automatic/manual matrix display, message modification, shutdown), Auto-start program on power-up, Shutdown button</p>
+                                    <p><strong>Software:</strong> Python, Raspberry Pi OS</p>
+                                    <p><strong>Hardware:</strong> Raspberry Pi Zero W, 8x8 LED Matrix</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('raspberry_pi')">View Screenshots</button>
+                                </div>
+                            </div>
+                            <div class="details-container color-container">
+                                <img src="assets/projects/assembly_project/assembly.png" alt="Assembly" class="project-img" onclick="openImageModal('assets/projects/assembly_project/assembly.png')">
+                                <h2><strong>MACHINE PROBLEM</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">Enigma Machine Cipher</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Decryption game (decrypt pre-set words with difficulty levels), User-defined word encryption (encrypt user-input words into coded messages), Low-level programming</p>
+                                    <p><strong>Software:</strong> emu8086 (Assembly Emulator)</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('assembly')">View Screenshots</button>
+                                </div>
+                            </div>
+                            <div class="details-container color-container">
+                                <img src="assets/projects/light_motion_project/light_motion.png" alt="IoT House Monitoring" class="project-img" onclick="openImageModal('assets/projects/light_motion_project/light_motion.png')">
+                                <h2><strong>MACHINE PROBLEM</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">IoT Light Motion Sensor with Manual Override</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Manual/Automatic LED control, Light level detection, Manual override, Alarm LED/Buzzer counter, Data logging (LED trigger date, alarm trigger, manual/automatic status)</p>
+                                    <p><strong>Software:</strong> Visual Studio 2022 (C#), PHP, MySQL, XAMPP, Arduino IDE, Website Application</p>
+                                    <p><strong>Hardware:</strong> Wemos D1 board, Light Dependent Resistor (LDR), Sensors</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('light_motion')">View Screenshots</button>
+                                </div>
+                            </div>
+                            <div class="details-container color-container">
+                                <img src="assets/projects/smart_access_project/smart_access.png" alt="IoT House Monitoring" class="project-img" onclick="openImageModal('assets/projects/smart_access_project/smart_access.png')">
+                                <h2><strong>MACHINE PROBLEM</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">Smart Access Control and Monitoring System</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> RFID authentication, Real-time Monitoring, Microcontroller Interfacing.</p>
+                                    <p><strong>Software:</strong> Visual Studio 2022 (C#), PHP, MySQL, XAMPP, Arduino IDE, Mobile Application.</p>
+                                    <p><strong>Hardware:</strong> WEMOS, Arduino Uno, RFID module.</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('smart_access')">View Screenshots</button>
+                                </div>
+                    
+                            </div>
                         </div>
                     </div>
-                    <!-- Capstone Project: IoT Air Quality Monitoring -->
-                    <div class="details-container color-container">
-                        <img src="assets/projects/air_quality.png" alt="Air Quality System" class="project-img">
-                        <h2><strong>CAPSTONE</strong></h2>
-                        <hr>
-                        <br>
-                        <h2 class="experience-sub-title project-title">IoT Based Air Quality Monitoring System <br>(4th Year)</h2>
-                        <div class="project-details">
-                            <p><strong>Features:</strong> Real-time Air Quality Data, Cloud Integration, Microcontroller Interfacing, Web Application.</p>
-                            <p><strong>Software:</strong> Arduino IDE, Visual Studio Code, C# Web Application.</p>
-                            <p><strong>Hardware:</strong> ESP32, MQ Series Sensors, GPS Module.</p>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('air_quality')">View Screenshots</button>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h2>4th Year</h2>
+                        <img src="assets/icons/arrow.png" class="icon">
+                    </div>
+                    <div class="accordion-content">
+                        <div class="about-containers">
+                            <div class="details-container color-container">
+                                <img src="assets/projects/air_quality_project/air_quality.png" alt="Air Quality System" class="project-img" onclick="openImageModal('assets/projects/air_quality_project/air_quality.png')">
+                                <h2><strong>CAPSTONE</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">IoT Based Air Quality Monitoring System</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Real-time Air Quality Data, Cloud Integration, Microcontroller Interfacing, Web Application</p>
+                                    <p><strong>Software:</strong> Arduino IDE, Visual Studio Code, C# Web Application</p>
+                                    <p><strong>Hardware:</strong> ESP32, MQ Series Sensors, GPS Module</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('air_quality')">View Screenshots</button>
+                                </div>
+                            </div>
+                            <div class="details-container color-container">
+                                <img src="assets/projects/inventory_management_project/inventory.png" alt="Inventory Management System" class="project-img" onclick="openImageModal('assets/projects/inventory_management_project/inventory.png')">
+                                <h2><strong>INTERNSHIP</strong></h2>
+                                <hr>
+                                <h2 class="experience-sub-title project-title">Inventory Management System</h2>
+                                <div class="project-details">
+                                    <p><strong>Features:</strong> Hardware & Software Inventory Management, Generation of Inventory Reports, User Role Management, System Logs</p>
+                                    <p><strong>Software:</strong>  Visual Studio Code, PHP-Based Web Application</p>
+                                    <p><strong>Framework:</strong> CodeIgniter 4, MVC Architecture</p>
+                                </div>
+                                <div class="btn-container">
+                                    <button class="btn btn-color-2 project-btn" onclick="openScreenshotModal('inventory')">View Screenshots</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -314,8 +455,7 @@
             </nav>
             <p>Copyright © 2025 Ivan Alvarez. All Rights Reserved.</p>
         </footer>
-
-        <!-- JavaScript -->
+        <!-- JavaScript --> 
         <script src="js/script.js"></script>
     </body>
 </html>

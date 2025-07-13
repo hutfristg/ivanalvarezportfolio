@@ -1,172 +1,177 @@
 /* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
-  .wrapper {
-      max-width: 90%;
-  }
-  .container, .section-container {
-      grid-template-columns: 1fr;
-      text-align: center;
-  }
-  .hero-pic img, .about-pic {
-      max-width: 250px;
-      margin: 0 auto;
-  }
-  .hero-text, .text-container {
-      padding: 2rem 1rem;
-      text-align: center;
-  }
-  .about-containers {
-      grid-template-columns: 1fr;
-      padding: 1.5rem 0.5rem; /* Adjusted for smaller screens */
-  }
-  .about-details-container {
-      margin-right: 0; /* Remove fixed margin for smaller screens */
-  }
-  nav .togglebtn {
-      display: block;
-  }
-  nav .navlinks {
-      position: fixed;
-      top: 80px;
-      right: -100%;
-      width: 70%;
-      height: 100vh;
-      background: #E5CBB6;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: right 0.3s ease;
-      z-index: 999;
-  }
-  nav .navlinks li {
-      margin: 1rem 0;
-  }
-  nav .navlinks li a {
-      font-size: 1.5rem;
-      display: block;
-      padding: 0.8rem;
-  }
-  nav .navlinks.open {
-      right: 0;
-  }
-  .cert-preview-btn {
-      width: 100px;
-      height: 28px;
-      font-size: 0.7rem;
-  }
-  .cert-tooltip {
-      top: -120px;
-  }
-  .cert-tooltip img {
-      max-width: 150px;
-      max-height: 100px;
-  }
-  .modal-content {
-      width: 90%;
-      height: 70%;
-  }
-  .modal-body img {
-      max-width: 250px;
-      max-height: 250px;
-  }
-  .modal-body iframe {
-      height: 100%;
-  }
-  .logo img {
-      max-width: 60px;
-      justify-content: center;
-  }
+    .wrapper {
+        max-width: 90%;
+        padding: 0 1.5rem;
+    }
+    .container, .section-container {
+        
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .btn-group {
+        flex-direction: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .social {
+        justify-content: center;
+        padding: 0.5rem 0;
+        gap: 1rem;
+    }
+    .hero-pic img, .about-pic {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .hero-text, .text-container {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+    .about-containers {
+        grid-template-columns: 1fr;
+        padding: 1.5rem 0;
+    }
+    .about-details-container {
+        margin: 0;
+    }
+    nav .togglebtn {
+        display: block;
+    }
+    nav .navlinks {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #F7F2EE;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease;
+        z-index: 999;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    nav .navlinks li {
+        margin: 1.5rem 0;
+    }
+    nav .navlinks li a {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    nav .navlinks.open {
+        right: 0;
+    }
+    .modal-content, .image-modal-content {
+        width: 90%;
+        height: 70%;
+    }
+    .modal-body img {
+        max-width: 240px;
+        max-height: 240px;
+    }
 }
 
-@media (max-width: 600px) {
-  .hero-text h1 {
-      font-size: 2.2rem;
-  }
-  .hero-text h2 {
-      font-size: 1.8rem;
-  }
-  .hero-text p, .text-container p {
-      font-size: 1rem;
-  }
-  .title {
-      font-size: 2rem;
-  }
-  .section__text__p1 {
-      font-size: 1.1rem;
-  }
-  .details-container {
-      padding: 1rem; /* Reduced padding for smaller screens */
-  }
-  .project-img, .about-pic {
-      max-height: 150px;
-  }
-  .contact-info-upper-container {
-      flex-direction: column;
-      gap: 1rem;
-  }
-  .contact-info-container p a {
-      font-size: 1rem;
-  }
-  .footer-sec {
-      padding: 1.5rem 0;
-  }
-  .cert-preview-btn {
-      width: 80px;
-      height: 24px;
-      font-size: 0.6rem;
-  }
-  .cert-tooltip {
-      top: -100px;
-  }
-  .cert-tooltip img {
-      max-width: 120px;
-      max-height: 80px;
-  }
-  .hero-pic img, .about-pic {
-      justify-content: center;
-      max-width: 200px;
-      margin: 0 auto;
-  }
-  .modal-content {
-      width: 95%;
-      height: 60%;
-  }
-  .modal-body img {
-      max-width: 200px;
-      max-height: 200px;
-  }
-  .modal-body iframe {
-      height: 100%;
-  }
-  .logo img {
-      max-width: 60px;
-      justify-content: center;
-  }
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-text h2 {
+        font-size: 1.7rem;
+    }
+    .hero-text p, .text-container p {
+        font-size: 0.95rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .btn-group {
+        justify-content: center;
+        flex-direction: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .social {
+        justify-content: center;
+        gap: 1rem;
+    }
+    .section__text__p1 {
+        font-size: 1rem;
+    }
+    .details-container {
+        padding: 1rem;
+        max-width: 90%;
+    }
+    .project-img, .about-pic {
+        max-height: 160px;
+    }
+    .contact-info-upper-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .contact-info-container p a {
+        font-size: 0.9rem;
+    }
+    .footer-sec {
+        padding: 1.5rem 0;
+    }
+    .modal-content, .image-modal-content {
+        width: 95%;
+        height: 65%;
+    }
+    .modal-body img {
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
-@media (max-width: 400px) {
-  .wrapper {
-      padding: 0 1rem;
-  }
-  .hero-pic img, .about-pic {
-      justify-content: center;
-      max-width: 180px;
-  }
-  .details-container {
-      padding: 0.8rem;
-  }
-  .about-containers {
-      padding: 1rem 0.3rem;
-  }
-  .cert-tooltip {
-      top: -80px;
-  }
-  .cert-tooltip img {
-      max-width: 100px;
-      max-height: 70px;
-  }
-  .logo img {
-      max-width: 60px;
-      justify-content: center;
-  }
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 0 1rem;
+    }
+    .hero-pic img, .about-pic {
+        max-width: 250px;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    .hero-text p, .text-container p {
+        font-size: 0.9rem;
+    }
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .btn-group .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+    .social {
+        justify-content: center;
+        gap: 1rem;
+    }
+    .details-container {
+        padding: 0.8rem;
+    }
+    .about-containers {
+        padding: 1rem 0;
+    }
+    .modal-content, .image-modal-content {
+        width: 95%;
+        height: 60%;
+    }
+    .modal-body img {
+        max-width: 180px;
+        max-height: 180px;
+    }
+    .accordion-header h2 {
+        font-size: 1.3rem;
+    }
+    .project-img {
+        max-height: 140px;
+    }
 }
