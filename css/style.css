@@ -450,6 +450,7 @@ article div p {
 }
 
 .nav-links {
+    list-style: none;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -685,7 +686,7 @@ article div p {
 /* About Section Styles */
 .about-sec {
     background: #F7F2EE;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem 4rem 2rem;
 }
 
 .section-container {
@@ -693,7 +694,7 @@ article div p {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 }
 
 .section__pic-container {

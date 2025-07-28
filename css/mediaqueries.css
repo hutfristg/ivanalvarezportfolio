@@ -127,7 +127,21 @@
 
 @media (max-width: 480px) {
     .wrapper {
-        padding: 0 1rem;
+        padding: 0 1rem 1rem 2rem;
+    }
+    /* Header Styling */
+    header#home {
+        display: flex;
+        justify-content: space-between; /* Aligns logo and togglebtn on opposite sides */
+        align-items: center; /* Vertically centers logo and hamburger */
+        width: 100%;
+        padding: 0rem ; /* Minimal padding for header */
+        box-sizing: border-box; /* Prevent padding from causing overflow */
+    }
+    .logo img {
+        max-width: 40px;
+        height: auto;
+        object-fit: contain;
     }
     .hero-pic img, .about-pic {
         max-width: 250px;
@@ -142,6 +156,7 @@
         font-size: 0.9rem;
     }
     .btn-group {
+        padding-top: 5rem;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
